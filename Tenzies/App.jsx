@@ -26,6 +26,8 @@ export default function App() {
     }
 
     function rollDice() {
+        gameWon ?
+        setDice(generateAllNewDice()) :
         setDice(oldDice => oldDice.map(die =>
             die.isHeld ?
                 die :
